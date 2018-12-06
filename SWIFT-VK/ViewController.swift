@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import VK_ios_sdk
 
 class ViewController: UIViewController {
 
@@ -16,5 +17,11 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var la: UILabel!
+    @IBAction func but(_ sender: UIButton) {
+    
+        VKAuth.shared.login()
+        self.performSegue(withIdentifier: "loginSegue", sender: self)
+    }
 }
 
