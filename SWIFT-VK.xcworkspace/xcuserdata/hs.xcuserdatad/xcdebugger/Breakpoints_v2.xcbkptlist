@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SWIFT-VK/VKAuth.swift"
-            timestampString = "565823901.861917"
+            timestampString = "565832936.725595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "VKAuth"
             landmarkType = "3">
          </BreakpointContent>

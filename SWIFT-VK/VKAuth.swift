@@ -11,9 +11,10 @@ import VK_ios_sdk
 
 class VKAuth: NSObject {
     
+    
     static let shared = VKAuth()
     static let vk_app_id="6750726"// уникальный айди приложение
-    let sdkInstance=VKSdk.initialize(withAppId: "6750726")//инициализируем сдк
+    let sdkInstance=VKSdk.initialize(withAppId: vk_app_id)//инициализируем сдк
     let permissions = ["friends", "messages", "wall","music"]// список прав
     var token: VKAccessToken?
     
@@ -34,7 +35,7 @@ class VKAuth: NSObject {
         })
     }
     
-    
+  
     
     func logout(){
         VKSdk.forceLogout()
