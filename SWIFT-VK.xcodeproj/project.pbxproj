@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3C8B096C1AFC13C4F4F1E740 /* Pods_SWIFT_VK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F071F840776D09DB5367A818 /* Pods_SWIFT_VK.framework */; };
-		4524C46221B801B60015704E /* VKAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4524C46121B801B60015704E /* VKAuth.swift */; };
+		452D2DEE21B9F08D00C576BE /* MessageProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D2DED21B9F08D00C576BE /* MessageProviderProtocol.swift */; };
+		452D2DF021B9F0C700C576BE /* FriendListProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D2DEF21B9F0C700C576BE /* FriendListProviderProtocol.swift */; };
+		452D2DF421B9F1FF00C576BE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D2DF321B9F1FF00C576BE /* Message.swift */; };
+		452D2DF621B9F23F00C576BE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D2DF521B9F23F00C576BE /* Person.swift */; };
+		452D2DFA21B9F2DA00C576BE /* VKProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D2DF921B9F2DA00C576BE /* VKProvider.swift */; };
+		452D2DFD21B9F65D00C576BE /* FriendListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D2DFC21B9F65D00C576BE /* FriendListController.swift */; };
+		452D2DFF21B9F92E00C576BE /* FriendListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D2DFE21B9F92E00C576BE /* FriendListViewCell.swift */; };
 		454E8F2D21B7FEE800BE765F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E8F2C21B7FEE800BE765F /* AppDelegate.swift */; };
 		454E8F2F21B7FEE800BE765F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E8F2E21B7FEE800BE765F /* LoginViewController.swift */; };
 		454E8F3221B7FEE800BE765F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454E8F3021B7FEE800BE765F /* Main.storyboard */; };
@@ -17,7 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4524C46121B801B60015704E /* VKAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAuth.swift; sourceTree = "<group>"; };
+		452D2DED21B9F08D00C576BE /* MessageProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageProviderProtocol.swift; sourceTree = "<group>"; };
+		452D2DEF21B9F0C700C576BE /* FriendListProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListProviderProtocol.swift; sourceTree = "<group>"; };
+		452D2DF321B9F1FF00C576BE /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		452D2DF521B9F23F00C576BE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		452D2DF921B9F2DA00C576BE /* VKProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKProvider.swift; sourceTree = "<group>"; };
+		452D2DFC21B9F65D00C576BE /* FriendListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListController.swift; sourceTree = "<group>"; };
+		452D2DFE21B9F92E00C576BE /* FriendListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewCell.swift; sourceTree = "<group>"; };
 		454E8F2921B7FEE800BE765F /* SWIFT-VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWIFT-VK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		454E8F2C21B7FEE800BE765F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		454E8F2E21B7FEE800BE765F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +54,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452D2DF721B9F26000C576BE /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				452D2DEF21B9F0C700C576BE /* FriendListProviderProtocol.swift */,
+				452D2DED21B9F08D00C576BE /* MessageProviderProtocol.swift */,
+				452D2DF921B9F2DA00C576BE /* VKProvider.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		452D2DF821B9F27000C576BE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				452D2DF521B9F23F00C576BE /* Person.swift */,
+				452D2DF321B9F1FF00C576BE /* Message.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		452D2DFB21B9F62000C576BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				454E8F2E21B7FEE800BE765F /* LoginViewController.swift */,
+				452D2DFC21B9F65D00C576BE /* FriendListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		454E8F2021B7FEE800BE765F = {
 			isa = PBXGroup;
 			children = (
@@ -63,13 +103,15 @@
 		454E8F2B21B7FEE800BE765F /* SWIFT-VK */ = {
 			isa = PBXGroup;
 			children = (
+				452D2DFB21B9F62000C576BE /* Controller */,
 				454E8F2C21B7FEE800BE765F /* AppDelegate.swift */,
-				454E8F2E21B7FEE800BE765F /* LoginViewController.swift */,
 				454E8F3021B7FEE800BE765F /* Main.storyboard */,
 				454E8F3321B7FEED00BE765F /* Assets.xcassets */,
 				454E8F3521B7FEED00BE765F /* LaunchScreen.storyboard */,
 				454E8F3821B7FEED00BE765F /* Info.plist */,
-				4524C46121B801B60015704E /* VKAuth.swift */,
+				452D2DF721B9F26000C576BE /* protocol */,
+				452D2DF821B9F27000C576BE /* model */,
+				452D2DFE21B9F92E00C576BE /* FriendListViewCell.swift */,
 			);
 			path = "SWIFT-VK";
 			sourceTree = "<group>";
@@ -215,7 +257,13 @@
 			files = (
 				454E8F2F21B7FEE800BE765F /* LoginViewController.swift in Sources */,
 				454E8F2D21B7FEE800BE765F /* AppDelegate.swift in Sources */,
-				4524C46221B801B60015704E /* VKAuth.swift in Sources */,
+				452D2DEE21B9F08D00C576BE /* MessageProviderProtocol.swift in Sources */,
+				452D2DF421B9F1FF00C576BE /* Message.swift in Sources */,
+				452D2DFF21B9F92E00C576BE /* FriendListViewCell.swift in Sources */,
+				452D2DF621B9F23F00C576BE /* Person.swift in Sources */,
+				452D2DFD21B9F65D00C576BE /* FriendListController.swift in Sources */,
+				452D2DF021B9F0C700C576BE /* FriendListProviderProtocol.swift in Sources */,
+				452D2DFA21B9F2DA00C576BE /* VKProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
