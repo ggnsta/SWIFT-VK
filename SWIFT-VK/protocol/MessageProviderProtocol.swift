@@ -9,8 +9,8 @@
 import Foundation
 
 protocol MessagesProviderProtocol {
- //   func get(messagesListWith treatmentMessages: @escaping ([Message]) -> Void)
-   // func delete(chatBy id: NSNumber)
- //   func get(longPollServerWith callBack: @escaping () -> Void)
-   // func registration(longPollWith callBack: @escaping () -> Void)
+    func get(messagesListWith treatmentMessages: @escaping ([Message]) -> Void)
+    func delete(chatBy id: NSNumber)
+   func get(longPollServerWith callBack: @escaping () -> Void)
+    func registration(longPollWith callBack: @escaping () -> Void)
 }

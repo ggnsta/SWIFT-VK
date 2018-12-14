@@ -20,6 +20,18 @@
 		454E8F3221B7FEE800BE765F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454E8F3021B7FEE800BE765F /* Main.storyboard */; };
 		454E8F3421B7FEED00BE765F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 454E8F3321B7FEED00BE765F /* Assets.xcassets */; };
 		454E8F3721B7FEED00BE765F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454E8F3521B7FEED00BE765F /* LaunchScreen.storyboard */; };
+		45F6E92821C33DCA0035C35A /* AttachmentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E92721C33DCA0035C35A /* AttachmentMessage.swift */; };
+		45F6E92A21C33DF60035C35A /* PrivateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E92921C33DF60035C35A /* PrivateMessage.swift */; };
+		45F6E92D21C33E960035C35A /* MessagesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E92C21C33E960035C35A /* MessagesListTableViewCell.swift */; };
+		45F6E92F21C33EC50035C35A /* PrivateMessagesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E92E21C33EC50035C35A /* PrivateMessagesListTableViewCell.swift */; };
+		45F6E93121C33F030035C35A /* PrivateChatProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E93021C33F030035C35A /* PrivateChatProviderProtocol.swift */; };
+		45F6E93321C33F620035C35A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E93221C33F620035C35A /* ChatViewController.swift */; };
+		45F6E93521C33F910035C35A /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E93421C33F910035C35A /* MessagesController.swift */; };
+		45F6E93E21C340C60035C35A /* DownloaderImageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E93921C340C50035C35A /* DownloaderImageProtocol.swift */; };
+		45F6E93F21C340C60035C35A /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E93A21C340C50035C35A /* CacheProtocol.swift */; };
+		45F6E94021C340C60035C35A /* CacheImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E93B21C340C50035C35A /* CacheImages.swift */; };
+		45F6E94121C340C60035C35A /* DownloaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E93C21C340C50035C35A /* DownloaderImage.swift */; };
+		45F6E94221C340C60035C35A /* FileSystemImagesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6E93D21C340C60035C35A /* FileSystemImagesCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +49,18 @@
 		454E8F3321B7FEED00BE765F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		454E8F3621B7FEED00BE765F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		454E8F3821B7FEED00BE765F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45F6E92721C33DCA0035C35A /* AttachmentMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentMessage.swift; sourceTree = "<group>"; };
+		45F6E92921C33DF60035C35A /* PrivateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateMessage.swift; sourceTree = "<group>"; };
+		45F6E92C21C33E960035C35A /* MessagesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListTableViewCell.swift; sourceTree = "<group>"; };
+		45F6E92E21C33EC50035C35A /* PrivateMessagesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateMessagesListTableViewCell.swift; sourceTree = "<group>"; };
+		45F6E93021C33F030035C35A /* PrivateChatProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateChatProviderProtocol.swift; sourceTree = "<group>"; };
+		45F6E93221C33F620035C35A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		45F6E93421C33F910035C35A /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
+		45F6E93921C340C50035C35A /* DownloaderImageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloaderImageProtocol.swift; sourceTree = "<group>"; };
+		45F6E93A21C340C50035C35A /* CacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
+		45F6E93B21C340C50035C35A /* CacheImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheImages.swift; sourceTree = "<group>"; };
+		45F6E93C21C340C50035C35A /* DownloaderImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloaderImage.swift; sourceTree = "<group>"; };
+		45F6E93D21C340C60035C35A /* FileSystemImagesCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemImagesCache.swift; sourceTree = "<group>"; };
 		614076D2054316AEEF68939F /* Pods-SWIFT-VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWIFT-VK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWIFT-VK/Pods-SWIFT-VK.debug.xcconfig"; sourceTree = "<group>"; };
 		BCE6EDBEFA8020F2A17E093C /* Pods-SWIFT-VK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWIFT-VK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWIFT-VK/Pods-SWIFT-VK.release.xcconfig"; sourceTree = "<group>"; };
 		F071F840776D09DB5367A818 /* Pods_SWIFT_VK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWIFT_VK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +84,7 @@
 				452D2DEF21B9F0C700C576BE /* FriendListProviderProtocol.swift */,
 				452D2DED21B9F08D00C576BE /* MessageProviderProtocol.swift */,
 				452D2DF921B9F2DA00C576BE /* VKProvider.swift */,
+				45F6E93021C33F030035C35A /* PrivateChatProviderProtocol.swift */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -67,8 +92,10 @@
 		452D2DF821B9F27000C576BE /* model */ = {
 			isa = PBXGroup;
 			children = (
+				45F6E92721C33DCA0035C35A /* AttachmentMessage.swift */,
 				452D2DF521B9F23F00C576BE /* Person.swift */,
 				452D2DF321B9F1FF00C576BE /* Message.swift */,
+				45F6E92921C33DF60035C35A /* PrivateMessage.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -78,6 +105,8 @@
 			children = (
 				454E8F2E21B7FEE800BE765F /* LoginViewController.swift */,
 				452D2DFC21B9F65D00C576BE /* FriendListController.swift */,
+				45F6E93221C33F620035C35A /* ChatViewController.swift */,
+				45F6E93421C33F910035C35A /* MessagesController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,17 +132,40 @@
 		454E8F2B21B7FEE800BE765F /* SWIFT-VK */ = {
 			isa = PBXGroup;
 			children = (
-				452D2DFB21B9F62000C576BE /* Controller */,
 				454E8F2C21B7FEE800BE765F /* AppDelegate.swift */,
-				454E8F3021B7FEE800BE765F /* Main.storyboard */,
-				454E8F3321B7FEED00BE765F /* Assets.xcassets */,
-				454E8F3521B7FEED00BE765F /* LaunchScreen.storyboard */,
 				454E8F3821B7FEED00BE765F /* Info.plist */,
+				454E8F3321B7FEED00BE765F /* Assets.xcassets */,
+				45F6E93821C340950035C35A /* service */,
+				45F6E92B21C33E2F0035C35A /* View */,
+				452D2DFB21B9F62000C576BE /* Controller */,
 				452D2DF721B9F26000C576BE /* protocol */,
 				452D2DF821B9F27000C576BE /* model */,
-				452D2DFE21B9F92E00C576BE /* FriendListViewCell.swift */,
 			);
 			path = "SWIFT-VK";
+			sourceTree = "<group>";
+		};
+		45F6E92B21C33E2F0035C35A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				454E8F3521B7FEED00BE765F /* LaunchScreen.storyboard */,
+				454E8F3021B7FEE800BE765F /* Main.storyboard */,
+				452D2DFE21B9F92E00C576BE /* FriendListViewCell.swift */,
+				45F6E92C21C33E960035C35A /* MessagesListTableViewCell.swift */,
+				45F6E92E21C33EC50035C35A /* PrivateMessagesListTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45F6E93821C340950035C35A /* service */ = {
+			isa = PBXGroup;
+			children = (
+				45F6E93B21C340C50035C35A /* CacheImages.swift */,
+				45F6E93A21C340C50035C35A /* CacheProtocol.swift */,
+				45F6E93C21C340C50035C35A /* DownloaderImage.swift */,
+				45F6E93921C340C50035C35A /* DownloaderImageProtocol.swift */,
+				45F6E93D21C340C60035C35A /* FileSystemImagesCache.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 		4F8407F27CEA5E686831AFDD /* Pods */ = {
@@ -255,15 +307,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F6E94021C340C60035C35A /* CacheImages.swift in Sources */,
 				454E8F2F21B7FEE800BE765F /* LoginViewController.swift in Sources */,
 				454E8F2D21B7FEE800BE765F /* AppDelegate.swift in Sources */,
+				45F6E92821C33DCA0035C35A /* AttachmentMessage.swift in Sources */,
 				452D2DEE21B9F08D00C576BE /* MessageProviderProtocol.swift in Sources */,
+				45F6E93121C33F030035C35A /* PrivateChatProviderProtocol.swift in Sources */,
 				452D2DF421B9F1FF00C576BE /* Message.swift in Sources */,
+				45F6E93F21C340C60035C35A /* CacheProtocol.swift in Sources */,
 				452D2DFF21B9F92E00C576BE /* FriendListViewCell.swift in Sources */,
 				452D2DF621B9F23F00C576BE /* Person.swift in Sources */,
+				45F6E94121C340C60035C35A /* DownloaderImage.swift in Sources */,
+				45F6E94221C340C60035C35A /* FileSystemImagesCache.swift in Sources */,
 				452D2DFD21B9F65D00C576BE /* FriendListController.swift in Sources */,
+				45F6E92F21C33EC50035C35A /* PrivateMessagesListTableViewCell.swift in Sources */,
 				452D2DF021B9F0C700C576BE /* FriendListProviderProtocol.swift in Sources */,
+				45F6E92D21C33E960035C35A /* MessagesListTableViewCell.swift in Sources */,
 				452D2DFA21B9F2DA00C576BE /* VKProvider.swift in Sources */,
+				45F6E93321C33F620035C35A /* ChatViewController.swift in Sources */,
+				45F6E92A21C33DF60035C35A /* PrivateMessage.swift in Sources */,
+				45F6E93521C33F910035C35A /* MessagesController.swift in Sources */,
+				45F6E93E21C340C60035C35A /* DownloaderImageProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

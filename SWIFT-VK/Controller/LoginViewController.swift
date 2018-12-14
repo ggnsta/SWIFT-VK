@@ -38,32 +38,29 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         let sdkInstance = VKSdk.initialize(withAppId: vk_app_id)
         sdkInstance?.register(self)
         sdkInstance?.uiDelegate = self
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+     
         
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        VKSdk.wakeUpSession(permissions, complete: { (state, error) -> Void in
+        VKSdk.wakeUpSession( permissions , complete: { (state, error) -> Void in
             if (state == VKAuthorizationState.authorized) {
                 self.goToNextController()
             } else if ((error) != nil) {
                 print("ERROR: \(error as! String)")
             } else {
-                VKSdk.authorize(self.permissions,  with: .disableSafariController)
+                VKSdk.authorize(self.permissions, with: .disableSafariController)
             }
         })
     }
     
     private func goToNextController() {
-        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "TabViewController")
         self.present(controller, animated: true, completion: nil)
     }
 
+   
     
-    @IBOutlet weak var la: UILabel!
-    @IBAction func but(_ sender: UIButton) {
-    
-    }
 }
 

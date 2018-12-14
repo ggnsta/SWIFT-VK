@@ -10,5 +10,5 @@ import Foundation
 protocol FriendsListProviderProtocol {
     //замыкание было передано в функцию в качестве аргумента и вызывается уже после того, как функция вернулась
     func get(friendsListWith treatmentFriends: @escaping ([Person]) -> Void)
- //   func delete(friendBy id: NSNumber)
+    func delete(friendBy id: NSNumber)
 }
