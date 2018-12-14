@@ -53,7 +53,9 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
             }
         })
     }
-    
+    @IBAction func Logout(_ sender: UIButton) {
+        VKSdk.forceLogout()
+    }
     private func goToNextController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "TabViewController")
