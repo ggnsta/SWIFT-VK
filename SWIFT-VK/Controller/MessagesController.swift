@@ -1,10 +1,10 @@
 
 //
-//  SecondTab.swift
-//  Messenger
+//  MessageController.swift
+//  SWIFT-VK
 //
-//  Created by Dmitry Vorozhbicky on 18.07.2018.
-//  Copyright © 2018 Dmitry Vorozhbicky. All rights reserved.
+//  Created by hs on 06.12.2018.
+//  Copyright © 2018 hs. All rights reserved.
 //
 
 import UIKit

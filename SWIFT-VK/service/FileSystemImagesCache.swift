@@ -1,9 +1,9 @@
 //
 //  FileSystemImagesCache.swift
-//  Messenger
+//  SWIFT-VK
 //
-//  Created by Dmitry Vorozhbicky on 08.08.2018.
-//  Copyright © 2018 Dmitry Vorozhbicky. All rights reserved.
+//   Created by hs on 06.12.2018.
+//  Copyright © 2018 hs. All rights reserved.
 //
 //  sandbox:
 //  documents - пользовательские данные, копируется в iT
