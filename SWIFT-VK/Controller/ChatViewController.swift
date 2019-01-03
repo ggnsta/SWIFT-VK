@@ -6,13 +6,14 @@
 //  Copyright © 2018 hs. All rights reserved.
 //
 import UIKit
+import VK_ios_sdk
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var buttomView: UIView!
-    public var chatId: String?
-    public var chatName: String?
+    private var chatId: String? 
+    private var chatName: String?
     private var provider: PrivateChatProviderProtocol?
     private var messages = [PrivateMessage]()
     private let cellReuseIdentifier = "privateMessagesCell"
@@ -20,6 +21,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var textField: UITextField!
     private var isKeyboardHide = true
     private let countMessages = "30"
+    
+    func setChatId(chatId: String)
+    {
+        self.chatId=chatId
+    }
+    func setChatName(chatName: String)
+    {
+        self.chatName=chatName
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,6 +142,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         provider?.send(message: textField.text!, byUserId: chatId!)
         textField.resignFirstResponder()
         textField.text = nil
+        
+        
+        
     }
     
     private func registerForKeyboardNotifications() {
@@ -154,6 +167,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func kbDidHide() {
         isKeyboardHide = true
     }
+    
 }
 
 //Index out of range
@@ -161,4 +175,6 @@ extension Collection where Indices.Iterator.Element == Index {
     subscript (exist index: Index) -> Iterator.Element? {
         return indices.contains(index) ? self[index] : nil
     }
+    
+    
 }

@@ -7,6 +7,7 @@
 //  Copyright © 2018 hs. All rights reserved.
 //
 
+
 import UIKit
 
 class MessagesController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
@@ -14,8 +15,8 @@ class MessagesController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var messagesList: UITableView!
     @IBOutlet weak var searchChat: UISearchBar!
     private let cellReuseIdentifier = "messagesCell"
-    private var messages = [Message]()
-    private var filteredMessages = [Message]()
+    private var messages = [PreliminaryMessage]()
+    private var filteredMessages = [PreliminaryMessage]()
     private var refreshControl:UIRefreshControl!
     private var downloadImageProcess: DownloaderImageProtocol?
     private var currentId: String?
@@ -112,16 +113,18 @@ class MessagesController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! ChatViewController
-        destinationVC.chatId = currentId!
-        destinationVC.chatName = currentName!
+        //destinationVC.chatId = currentId!
+        // destinationVC.chatName = currentName!
+        destinationVC.setChatId(chatId: currentId!)
+        destinationVC.setChatName(chatName: currentName!)
+        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredMessages = searchText.isEmpty ? messages : messages.filter { (item: Message) -> Bool in
+        filteredMessages = searchText.isEmpty ? messages : messages.filter { (item: PreliminaryMessage) -> Bool in
             return "\(item.person.name!) \(item.person.surname!)".range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         messagesList.reloadData()
     }
     
 }
-

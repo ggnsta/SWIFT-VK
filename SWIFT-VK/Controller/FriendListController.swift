@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class FriendsListController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak private var friendsList: UITableView!
     @IBOutlet weak private var searchFriends: UISearchBar!
@@ -83,8 +82,10 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! ChatViewController
-        destinationVC.chatId = currentId!
-        destinationVC.chatName = currentName!
+        //destinationVC.chatId = currentId!
+        //destinationVC.chatName = currentName!
+        destinationVC.setChatId(chatId: currentId!)
+        destinationVC.setChatName(chatName: currentName!)
     }
     
     private func registerData() {
