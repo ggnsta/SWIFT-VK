@@ -63,19 +63,10 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
     //Swipe to delete and send messages
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .default, title: "Delete") { [weak self] (_, indexPath) in
-            let alert = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
-                self?.provider?.delete(friendBy: (self?.filteredData[indexPath.row].id)!)
-                self?.registerData()
-            }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in }))
-            self?.present(alert, animated: true, completion: nil)
+            self?.showDeleteFriendAlert(editActionsForRowAt: indexPath)
         }
         let messages = UITableViewRowAction(style: .normal, title: "Messages") { [weak self] (_, indexPath) in
-            //go to messages
-            self?.currentId = self?.filteredData[indexPath.row].id?.stringValue
-            self?.currentName = "\((self?.filteredData[indexPath.row].name)!) \((self?.filteredData[indexPath.row].surname)!)"
-            self?.performSegue(withIdentifier: "showChatFromFriends", sender: nil)
+            self?.showSendMessageAlert(editActionsForRowAt: indexPath)
         }
         return [delete, messages]
     }
@@ -107,5 +98,24 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
             return "\(item.name!) \(item.surname!)".range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         friendsList.reloadData()
+    }
+    
+    func showDeleteFriendAlert(editActionsForRowAt indexPath: IndexPath)
+    {
+        let alert = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+            self.provider?.delete(friendBy: (self.filteredData[indexPath.row].id)!)
+            self.registerData()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showSendMessageAlert(editActionsForRowAt indexPath: IndexPath)
+    {
+        //go to messages
+        self.currentId = self.filteredData[indexPath.row].id?.stringValue
+        self.currentName = "\((self.filteredData[indexPath.row].name)!) \((self.filteredData[indexPath.row].surname)!)"
+        self.performSegue(withIdentifier: "showChatFromFriends", sender: nil)
     }
 }
