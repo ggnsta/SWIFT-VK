@@ -7,7 +7,6 @@
 //  Copyright © 2018 hs. All rights reserved.
 //
 
-
 import UIKit
 
 class MessagesController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
@@ -100,13 +99,7 @@ class MessagesController: UIViewController, UITableViewDelegate, UITableViewData
     //Swipe to delete and send messages
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .default, title: "Delete") { [weak self] (_, indexPath) in
-            let alert = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
-                self?.provider?.delete(chatBy: (self?.filteredMessages[indexPath.row].id)!)
-                self?.registerData()
-            }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in }))
-            self?.present(alert, animated: true, completion: nil)
+            self?.showDeleteFriendAlert(editActionsForRowAt: indexPath)
         }
         return [delete]
     }
@@ -117,14 +110,22 @@ class MessagesController: UIViewController, UITableViewDelegate, UITableViewData
         // destinationVC.chatName = currentName!
         destinationVC.setChatId(chatId: currentId!)
         destinationVC.setChatName(chatName: currentName!)
-        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredMessages = searchText.isEmpty ? messages : messages.filter { (item: PreliminaryMessage) -> Bool in
+        filteredMessages = searchText.isEmpty ? messages : messages.filter { (item: Message) -> Bool in
             return "\(item.person.name!) \(item.person.surname!)".range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         messagesList.reloadData()
     }
-    
+    func showDeleteFriendAlert(editActionsForRowAt indexPath: IndexPath){
+        let alert = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+            self.provider?.delete(chatBy: (self.filteredMessages[indexPath.row].id)!)
+            self.registerData()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { action in }))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
+
